@@ -144,9 +144,9 @@ def login_verificar():
         menu()
         # screen.place_forget()
         screen2.destroy()
-        menu.focus_set()
-        menu.grab_set()
-        menu.wait_window(menu)
+        # menu.focus_set()
+        # menu.grab_set()
+        # # menu.menu.wait_window(menu)
 
         
 

@@ -7,12 +7,28 @@ def pedido():
     pedido.resizable(0,0) 
     pedido.geometry('1024x900') 
 
-    pedido.focus_set()
-    pedido.grab_set()
-    pedido.wait_window(pedido)
-
-
+    # pedido.focus_set()
+    # pedido.grab_set()
+    # pedido.wait_window(pedido)
+    scroll = Scrollbar( orient = VERTICAL)
     
+    # scroll.config(command=listbox.yview)
+    scroll.pack(side = RIGHT, fill = Y)
+
+    listbox = Listbox(pedido,width = 20, height = 20, yscrollcommand = scroll.set)
+    # listbox.grid(column=0,row=0)
+    scroll.config(command=listbox.yview)
+    # scroll.grid(column=1, row=0, sticky='NS')
+    # scroll.pack(side = RIGHT, fill = Y)
+    
+   
+    listbox.insert(END, 'A list entry',)
+
+    for item in ['one','two','three','four','one','two','three','four','one','two','three','four','one','two','three','four','one','two','three','four','one','two','three','four','one','two','three','four','one','two','three','four','one','two','three','four']:
+            listbox.insert(END,item)
+
+    listbox.place(relx = 0.1,rely = 0.1)
+
 
 
 
