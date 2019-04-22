@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from tkinter import *
-from tkinter import ttk
+from tkinter import ttk # Carga ttk (para widgets nuevos 8.5+)
 # import time
 
 
